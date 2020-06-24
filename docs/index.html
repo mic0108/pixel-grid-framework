@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/styles.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/pixelgrids.min.css">
+</head>
+<body>
+	<div class="grid__container grid__example">
+		<div class="grid__row">
+			<div class="grid__col grid__example-head">
+				<h1>Pixel Grids Framework</h1>
+				<p>Pixel grid is a flex box based responsive framework which automatically adjust and adapt to any device screen size.</p>
+			</div>
+		</div>
+
+
+		<h3>Responsive columns</h3>
+		<p class="info">Use different device specific classes to create responsive structure.</p>
+		<div class="grid__row">
+			<div class="grid__col --xs-8 --sm-8 --md-2 --lg-6 --xl-2">
+				<div class="grid__example-content">
+					<ul>
+						<li>--sm-8</li>
+						<li>--md-2</li>
+						<li>--lg-6</li>
+						<li>--xl-2</li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid__col --xs-2 --sm-2 --md-8 --lg-3 --xl-5">
+				<div class="grid__example-content">
+					<ul>
+						<li>--xs-2</li>
+						<li>--sm-2</li>
+						<li>--md-8</li>
+						<li>--lg-3</li>
+						<li>--xl-5</li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid__col --xs-2 --sm-2 --md-2 --lg-3 --xl-5">
+				<div class="grid__example-content">
+					<ul>
+						<li>--xs-2</li>
+						<li>--sm-2</li>
+						<li>--md-2</li>
+						<li>--lg-3</li>
+						<li>--xl-5</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="grid__row">
+			<div class="grid__col --xs-12 --sm-3 --md-2 --lg-1">
+				<div class="grid__example-content">
+					<ul>
+						<li>--xs-12</li>
+						<li>--sm-3</li>
+						<li>--md-2</li>
+						<li>--lg-1</li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid__col --xs-12 --sm-9 --md-10 --lg-11">
+				<div class="grid__example-content">
+					<ul>
+						<li>--xs-12</li>
+						<li>--sm-9</li>
+						<li>--md-10</li>
+						<li>--lg-11</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="grid__row">
+			<div class="grid__col --xs-10 --sm-6 --md-8 --lg-10">
+				<div class="grid__example-content">
+					<ul>
+						<li>--xs-10</li>
+						<li>--sm-6</li>
+						<li>--md-8</li>
+						<li>--lg-10</li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid__col --xs-2 --sm-6 --md-4 --lg-2">
+				<div class="grid__example-content">
+					<ul>
+						<li>--xs-2</li>
+						<li>--sm-6</li>
+						<li>--md-4</li>
+						<li>--lg-2</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<br/><br/>
+
+
+		<h3>Equal width columns</h3>
+		<p class="info">Create equal width columns easily without providing any device specific classes. With flex box sitting at its base grid__cols will automatically span across available space. Columns will auto stack horizontally on small devices.</p>
+		<div class="grid__row">
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>No device specific classes</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col">
+		    	<div class="grid__example-content">   
+		    		<ul>
+						<li>No device specific classes</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<div class="grid__row">
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>No device specific classes</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>No device specific classes</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>No device specific classes</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<br/><br/>
+
+
+		<h3>Equal width multiline columns</h3>
+		<p class="info">If more than 12 columns (default grid) is used within single row, extra columns will fall into new line without breaking structure.</p>
+		<div class="grid__row">
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-6</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-6</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-6</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-6</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<br/><br/>
+
+
+		<h3>Single width column</h3>
+		<p class="info">Specifying device specific class to single column in multicolumn row, other columns will automatically resize around it. In below example other columns will resize no matter width of the centre column.</p>
+		<div class="grid__row">
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-6</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		
+		    	</div>
+		    </div>
+		</div>
+		<div class="grid__row">
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-5">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-5</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col">
+		    	<div class="grid__example-content">
+		    		
+		    	</div>
+		    </div>
+		</div>
+		<br/><br/>
+
+
+		<h3>Horizontal stacking of columns</h3>
+		<p class="info">To horizontally stack columns in small devices use higher device specific class. In below example on extra small devices columns will get horizontally stacked.</p>
+		<div class="grid__row">
+		    <div class="grid__col --xs-12 --sm-8">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-12</li>
+						<li>--sm-8</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-12 --sm-4">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-12</li>
+						<li>--sm-4</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<br/><br/>
+
+
+		<h3>Nested rows and cols</h3>
+		<p class="info">Nest columns to inside each other. To nest content add a new grid__row with grid__cols within an existing column.</p>
+		<div class="grid__row">
+		    <div class="grid__col --xs-12 --md-7">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-12</li>
+						<li>--md-7</li>
+					</ul>
+		            <div class="grid__row">
+		                <div class="grid__col --xs-8 --sm-8">
+		                	<div class="grid__example-content">
+		                		<ul>
+									<li>--xs-8</li>
+									<li>--sm-9</li>
+								</ul>
+		                        <div class="grid__row">
+		                            <div class="grid__col --xl-2">
+		                            	<div class="grid__example-content">
+		                            		<ul>
+												<li>--xl-2</li>
+											</ul>
+		                            	</div>
+		                            </div>
+		                            <div class="grid__col --xl-10">
+		                            	<div class="grid__example-content">
+		                            		<ul>
+												<li>--xl-10</li>
+											</ul>
+		                            	</div>
+		                            </div>
+		                        </div>
+		                        <div class="grid__row">
+		                    		<div class="grid__col --xs-8">
+		                    			<div class="grid__example-content">
+		                    				<ul>
+												<li>--xs-8</li>
+											</ul>
+		                    			</div>
+		                    		</div>
+		                    		<div class="grid__col --xs-4">
+		                    			<div class="grid__example-content">
+		                    				<ul>
+												<li>--xs-4</li>
+											</ul>
+		                    			</div>
+		                    		</div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="grid__col --xs-4 --sm-4">
+		                	<div class="grid__example-content">
+		                		<ul>
+									<li>--xs-4</li>
+									<li>--sm-3</li>
+								</ul>
+		                        <div class="grid__row">
+		                            <div class="grid__col --xs-12">
+		                            	<div class="grid__example-content">
+		                            		<ul>
+												<li>--xs-12</li>
+											</ul>
+		                            	</div>
+		                            </div>
+		                        </div>
+	                        </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="grid__col --xs-12 --md-5">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--xs-12</li>
+						<li>--md-5</li>
+					</ul>
+		            <div class="grid__row">
+		                <div class="grid__col --xs-12">
+		                	<div class="grid__example-content">
+		                		<ul>
+									<li>--xs-12</li>
+								</ul>
+		                        <div class="grid__row">
+		                            <div class="grid__col --xs-6">
+		                            	<div class="grid__example-content">
+		                            		<ul>
+												<li>--xs-6</li>
+											</ul>
+		                            	</div>
+		                            </div>
+		                            <div class="grid__col --xs-6">
+		                            	<div class="grid__example-content">
+		                            		<ul>
+												<li>--xs-6</li>
+											</ul>
+		                            	</div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<br/><br/>
+
+		<h3>Column alignment</h3>
+		<p class="info">Vertically or horizontally align columns using predefined classes.</p>
+		<div class="grid__row --start">
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--start</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<div class="grid__row --center">
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--center</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<div class="grid__row --end">
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--end</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<br/>
+		<div class="grid__row --top">
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content --bigger">
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--top</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<div class="grid__row --middle">
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content --bigger">
+		    		
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--middle</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<div class="grid__row --bottom">
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content --bigger">
+		    		
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-6">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--bottom</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<br/><br/>
+
+
+		<h3>Justify columns</h3>
+		<p class="info">Distribute extra free space evenly between columns.</p>
+		<div class="grid__row --around">
+		    <div class="grid__col --xs-2">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--around</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-2">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--around</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-2">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--around</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+		<div class="grid__row --between">
+		    <div class="grid__col --xs-2">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--between</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-2">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--between</li>
+					</ul>
+		    	</div>
+		    </div>
+		    <div class="grid__col --xs-2">
+		    	<div class="grid__example-content">
+		    		<ul>
+						<li>--between</li>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>

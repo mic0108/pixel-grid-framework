@@ -1,0 +1,19 @@
+{
+  "name": "pixel-grids",
+  "version": "1.0.0",
+  "description": "Flexbox based responsive grid framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.0.2"
+  },
+  "dependencies": {
+    "gulp-rename": "^2.0.0"
+  }
+}
