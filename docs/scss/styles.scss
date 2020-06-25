@@ -2,6 +2,8 @@ html, body {
 	height: 100%;
 	font-family: 'Roboto', sans-serif;
 	background: #e6e9ed;
+	margin: 0;
+	padding: 0;
 }
 
 .grid {
@@ -9,6 +11,8 @@ html, body {
 		$this: &;
 
 		&-head {
+			padding-bottom: 10px;
+
 			h1 {
 				margin-bottom: 5px;
 			    color: #000000;
@@ -20,8 +24,6 @@ html, body {
 			    color: #434a54;
 		        font-size: 18px;
     			font-weight: 300;
-			    border-bottom: 1px solid #ccd1d9;
-    			padding-bottom: 24px;
 			}
 		}
 
@@ -52,6 +54,55 @@ html, body {
 			    color: #2196F3;
 			    font-family: monospace;
 			    position: relative;
+			}
+		}
+
+		&-page-footer {
+			border-top: 1px solid #ccd1d9;
+			border-bottom: none;
+			padding-top: 24px;
+			margin-top: 32px;
+			font-size: 12px;
+		}
+
+		&-footer {
+			border-bottom: 1px solid #ccd1d9;
+			padding-bottom: 24px;
+
+			.button {
+				padding: 10px 20px;
+				border-radius: 20px;
+				background: #ffffff;
+				box-shadow: none;
+				border: 1px solid #ccd1d9;
+				font-size: 15px;
+				color: #434a54;
+				margin-right: 10px;
+				cursor: pointer;
+				text-decoration: none;
+				outline: none;
+				display: inline-block;
+
+				&:hover {
+					background: #f5f7fa;
+				}
+			}
+
+			.github-button {
+				padding-left: 42px;
+				position: relative;
+
+				&:before {
+					content: "";
+					position: absolute;
+					background: url('../images/GitHub-Mark-32px.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+					width: 24px;
+					height: 24px;
+					left: 9px;
+					top: 7px;
+				}
 			}
 		}
 	}
