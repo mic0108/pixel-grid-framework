@@ -27,8 +27,7 @@ $breakpoints: (
 
 .grid {
 	$this: &;
-	&__container,
-	&__container-fluid {
+	&__container {
 	  	margin-right: auto;
 	  	margin-left: auto;
 	  	flex: 1;
@@ -90,7 +89,7 @@ $breakpoints: (
 			@if $breakpoint {
 				@media (min-width: $breakpoint) {
 					@if $shortcode == xl {
-						@at-root .grid__container {
+						@at-root .grid__container:not(.--fluid) {
 							width: 1200px;
 						}
 					}

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.grid__container, .grid__container-fluid {
+.grid__container {
   margin-right: auto;
   margin-left: auto;
   flex: 1;
@@ -406,7 +406,7 @@
   }
 }
 @media (min-width: 1200px) {
-  .grid__container {
+  .grid__container:not(.--fluid) {
     width: 1200px;
   }
 
