@@ -8,21 +8,40 @@ $gridcols: 12;
 $gutter: 15;
 
 $breakpoints: (
-  xs: null,
+  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px
 ) !default;
 
-@mixin create_responsive_cols($parent, $shortcode) {
+@mixin media_query_content($breakpoint) {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin create_cols($gridcols, $shortcode) {
 	@for $i from 1 through $gridcols {
-		#{$parent}.--#{$shortcode}-#{$i} {
+		&.--#{$shortcode}-#{$i} {
 			flex-grow: 0;
 	        flex-basis: (100 / ($gridcols / $i)) * 1%;
 	        max-width: (100 / ($gridcols / $i)) * 1%;
 	    }
+	    &.--#{$shortcode}-offset-#{$i} {
+	    	margin-left: (100 / ($gridcols / $i)) * 1%;
+	    }
 	}
+}
+
+@mixin display_utilities($shortcode) {
+	.--#{$shortcode}-hide {
+    	display: none;
+    }
+
+    .--#{$shortcode}-show {
+    	display: block;
+    }
 }
 
 .grid {
@@ -81,39 +100,10 @@ $breakpoints: (
 
 	&__col {
 		content-sizing: border-content;
+		display: flex;
 		flex-grow: 1;
 		flex-shrink: 0;
 	    padding: ($gutter/2) * 1px;
-
-		@each $shortcode, $breakpoint in $breakpoints {
-			@if $breakpoint {
-				@media (min-width: $breakpoint) {
-					@if $shortcode == xl {
-						@at-root .grid__container:not(.--fluid) {
-							width: 1200px;
-						}
-					}
-					@for $i from 1 through $gridcols {
-						&.--#{$shortcode}-#{$i} {
-							flex-grow: 0;
-					        flex-basis: (100 / ($gridcols / $i)) * 1%;
-					        max-width: (100 / ($gridcols / $i)) * 1%;
-					    }
-					    &.--#{$shortcode}-offset-#{$i} {
-					    	margin-left: (100 / ($gridcols / $i)) * 1%;
-					    }
-					}
-				}
-			} @else {
-				@for $i from 1 through $gridcols {
-					&.--#{$shortcode}-#{$i} {
-						flex-grow: 0;
-				        flex-basis: (100 / ($gridcols / $i)) * 1%;
-				        max-width: (100 / ($gridcols / $i)) * 1%;
-				    }
-				}
-			}
-		}
 
 		#{$this}__row {
 			padding: ($gutter/2) * 1px;
@@ -125,28 +115,50 @@ $breakpoints: (
 		}
 	}
 
-	// &__example {
 
-	// }
+	@each $shortcode, $breakpoint in $breakpoints {
+		@if $shortcode != 'xs' {
+			@media (min-width: $breakpoint) {
+				&__container  {
+					@include display_utilities($shortcode)
+				}
 
-	// &__content {
-	// 	min-height: 30px;
-	// 	width: 100%;
-	// 	background: #ffffff;
-	// 	border-radius: 3px;
-	// 	box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+				&__col {
+					@if $shortcode == xl {
+						@at-root .grid__container:not(.--fluid) {
+							width: 1200px;
+						}
+					}
+					@include create_cols($gridcols, $shortcode)
+				}
+			}
 
-	// 	#{$this}__content {
-	// 		background: #aab2bd;
+		} @else {
+			&__container  {
+				@include display_utilities($shortcode)
+			}
 
-	// 		#{$this}__content {
-	// 			background: #656d78;
-	// 		}
-	// 	}
+			&__col {
+				@include create_cols($gridcols, $shortcode)
+			}
+		}
+	}
+}
 
-	// 	&.--bigger {
-	// 		height: 100px;
-	// 	}
-	// }
+.content {
+	display: flex;
+	flex-direction: row;
+}
+
+.--top {
+	align-items: flex-start;
+}
+
+.--middle {
+	align-items: center;
+}
+
+.--bottom {
+	align-items: flex-end;
 }
 

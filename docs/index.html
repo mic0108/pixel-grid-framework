@@ -14,22 +14,36 @@
 	<meta name="description" content= "Pixel grids is a flexbox based open source responsive CSS framework built with SASS" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<!-- generics -->
+	<link rel="icon" href="images/favicon/favicon-32.png" sizes="32x32">
+	<link rel="icon" href="images/favicon/favicon-57.png" sizes="57x57">
+	<link rel="icon" href="images/favicon/favicon-76.png" sizes="76x76">
+	<link rel="icon" href="images/favicon/favicon-96.png" sizes="96x96">
+	<link rel="icon" href="images/favicon/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="images/favicon/favicon-192.png" sizes="192x192">
+	<link rel="icon" href="images/favicon/favicon-228.png" sizes="228x228">
 	<link rel="stylesheet" type="text/css" href="./css/styles.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/pixelgrids.min.css">
 </head>
 <body>
 	<div class="grid__container grid__example">
 		<div class="grid__row">
-			<div class="grid__col --xs-12 grid__example">
-				<div>
+			<div class="grid__col --xs-12">
+					<div class="grid__example-logo --xs-hide --sm-hide --md-show"></div>
 					<div class="grid__example-head">
-						<h1>Pixel Grids Framework</h1>
+						<h1 class="content --middle">
+							<div class="grid__example-logo --xs-show --sm-show --md-hide"></div>
+							Pixel Grids Framework
+						</h1>
 						<p>Pixel grid is a flex box based responsive CSS framework which automatically adjust and adapt to any device screen sizes. Its open source & built with SASS.</p>
 					</div>
-					<div class="grid__example-footer">
-						<a class="button" href="https://github.com/mic0108/pixel-grids/archive/master.zip">Download</a>
-						<a class="button github-button" href="https://github.com/mic0108/pixel-grids">View on GitHub</a>
-					</div>
+			</div>
+		</div>
+		<div class="grid__row">
+			<div class="grid__col --xs-12">
+				<div class="grid__example-footer">
+					<a class="button" href="https://github.com/mic0108/pixel-grids/archive/master.zip">Download</a>
+					<a class="button github-button" href="https://github.com/mic0108/pixel-grids">View on GitHub</a>
 				</div>
 			</div>
 		</div>
@@ -280,17 +294,17 @@
 									<li>--sm-9</li>
 								</ul>
 		                        <div class="grid__row">
-		                            <div class="grid__col --xl-2">
+		                            <div class="grid__col --xl-5">
 		                            	<div class="grid__example-content">
 		                            		<ul>
-												<li>--xl-2</li>
+												<li>--xl-5</li>
 											</ul>
 		                            	</div>
 		                            </div>
-		                            <div class="grid__col --xl-10">
+		                            <div class="grid__col --xl-7">
 		                            	<div class="grid__example-content">
 		                            		<ul>
-												<li>--xl-10</li>
+												<li>--xl-7</li>
 											</ul>
 		                            	</div>
 		                            </div>
@@ -299,14 +313,14 @@
 		                    		<div class="grid__col --xs-8">
 		                    			<div class="grid__example-content">
 		                    				<ul>
-												<li>--xs-8</li>
+												<li>--xs-7</li>
 											</ul>
 		                    			</div>
 		                    		</div>
 		                    		<div class="grid__col --xs-4">
 		                    			<div class="grid__example-content">
 		                    				<ul>
-												<li>--xs-4</li>
+												<li>--xs-5</li>
 											</ul>
 		                    			</div>
 		                    		</div>
