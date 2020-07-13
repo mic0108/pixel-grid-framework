@@ -6,7 +6,7 @@ https://mic0108.github.io/pixel-grids/
 
 Add the **pixelgrids.css** in development or **pixelgrids.min.css** in production to your html page.
 
-`<link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">`
+`<link rel="stylesheet" href="css/pixelgrids.min.css" type="text/css">`
 
 
 
